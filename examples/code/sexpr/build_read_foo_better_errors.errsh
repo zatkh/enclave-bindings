@@ -1,0 +1,2 @@
+corebuild read_foo_better_errors.native
+./read_foo_better_errors.native foo_example_broken.scm
