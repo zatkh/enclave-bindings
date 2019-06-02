@@ -1,0 +1,6 @@
+[submodule "ocaml-ctypes"]
+	path = ocaml-ctypes
+	url = https://github.com/zatkh/ocaml-ctypes.git
+[submodule "ocaml-sodium"]
+	path = ocaml-sodium
+	url = https://github.com/zatkh/ocaml-sodium.git
