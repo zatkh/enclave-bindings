@@ -4,3 +4,6 @@
 [submodule "ocaml-sodium"]
 	path = ocaml-sodium
 	url = https://github.com/zatkh/ocaml-sodium.git
+[submodule "in-enclave-sodium"]
+	path = in-enclave-sodium
+	url = git@github.com:zatkh/in-enclave-sodium.git
