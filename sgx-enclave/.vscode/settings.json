@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stat.h": "c",
+        "enclave_u.h": "c",
+        "string.h": "c",
+        "iostream": "c",
+        "bypass_to_sgx.h": "c",
+        "unistd.h": "c",
+        "tinn.h": "c",
+        "stdlib.h": "c",
+        "cctimer.h": "c"
+    }
+}

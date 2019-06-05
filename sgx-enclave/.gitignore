@@ -1,0 +1,5 @@
+.config_*
+*.o
+*.a
+*.so
+main
