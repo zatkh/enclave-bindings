@@ -5,7 +5,7 @@ SGX_MODE ?= HW
 SGX_ARCH ?= x64
 SGX_DEBUG ?= 1
 ENCLAVE_DIR=enclave
-SGX_BENCH ?=1
+ENCLAVE_TEST ?=0
 RESULT_DIR ?=results
 RERUN ?=0
 SODIUM := Enclave/libsodium-1.0.12/src/libsodium
@@ -13,6 +13,8 @@ SODIUM := Enclave/libsodium-1.0.12/src/libsodium
 ifndef $(ITERATIONS)
 ITERATIONS=1000
 endif
+
+
 
 
 
@@ -141,6 +143,7 @@ Enclave_C_Flags := $(Common_C_Cpp_Flags) $(Enclave_Include_Paths) -fno-omit-fram
 Enclave_C_Flags += -DCONFIGURED
 Enclave_C_Flags += -I$(SODIUM)/include -I$(SODIUM)/include/sodium
 Enclave_C_Flags += -DSGX
+
 
 
 Enclave_Cpp_Flags := $(Common_C_Cpp_Flags) $(Enclave_C_Flags) -std=c++03 -nostdinc++ 

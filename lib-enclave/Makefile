@@ -4,11 +4,13 @@ SGX_DEBUG ?= 1
 EXE := main
 
 
+
+
 all:
-	$(MAKE) -f sgx_u.mk all
-	$(MAKE) -f sgx_t.mk all
+	$(MAKE) -f make_normal.mk all
+	$(MAKE) -f make_enclave.mk all
 
 clean:
-	$(MAKE) -f sgx_u.mk clean
-	$(MAKE) -f sgx_t.mk clean
+	$(MAKE) -f make_normal.mk clean
+	$(MAKE) -f make_enclave.mk clean
 

@@ -52,11 +52,12 @@ void u_test_main(void)
 // Application entry
 int main(int argc, char *argv[]){
 
-    //printf("normal run\n");
+#ifndef ENCLAVE_RUN
+   // printf("normal run\n");
     nacl_main(argc,argv);
+#else
+   // printf("enclave run\n");
 
-    //printf("enclave run\n");
-/*
     sgx_enclave_id_t eid = 0;
     char token_path[MAX_PATH] = {'\0'};
     sgx_launch_token_t token = {0};
@@ -72,9 +73,6 @@ int main(int argc, char *argv[]){
     }
     ecall_nacl_main(eid,&ret_val,argc,argv);
 
-
-
-   
     sgx_destroy_enclave(eid);
     if (ret != SGX_SUCCESS) {
         printf("Error: destroying enclave\n");
@@ -82,7 +80,8 @@ int main(int argc, char *argv[]){
     }
 
     //return ret_val;
-   */ 
+   
+#endif 
    return 0;
-    
+   
 }

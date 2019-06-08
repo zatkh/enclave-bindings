@@ -8,6 +8,8 @@ ENCLAVE_DIR=enclave
 SGX_BENCH ?=1
 RESULT_DIR ?=results
 RERUN ?=0
+ENCLAVE_TEST ?=1
+
 ifndef $(ITERATIONS)
 ITERATIONS=1000
 endif
@@ -95,6 +97,10 @@ else
 	Untrusted_Link_Flags += -lsgx_uae_service
 endif
 
+ifeq ($(ENCLAVE_TEST), 1)
+Untrusted_C_Flags += -DENCLAVE_RUN
+
+endif
 
 Untrusted_Objects := $(Untrusted_C_Files:.c=.o) 
 
