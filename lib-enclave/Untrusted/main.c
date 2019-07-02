@@ -53,10 +53,10 @@ void u_test_main(void)
 int main(int argc, char *argv[]){
 
 #ifndef ENCLAVE_RUN
-   // printf("normal run\n");
+    printf("normal run\n");
     nacl_main(argc,argv);
 #else
-   // printf("enclave run\n");
+    printf("enclave run\n");
 
     sgx_enclave_id_t eid = 0;
     char token_path[MAX_PATH] = {'\0'};
